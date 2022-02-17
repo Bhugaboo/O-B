@@ -1,0 +1,29 @@
+{
+"info": {
+        "url_png_icon_64x64": "http(s) url to pool icon; png format; not animated; max 40kb",
+        "url_png_logo": "http(s) url to pool logo; png format; not animated; max 50kb",
+        "location": "US",
+        "social": {
+            "twitter_handle": "@ObviouslyCrypto",
+            "telegram_handle": "",
+            "facebook_handle": "",
+            "youtube_handle": "",
+            "twitch_handle": "",
+            "discord_handle": "",
+            "github_handle": ""
+        },
+        "company": {
+            "name": "Orange and Blue",
+            "addr": "",
+            "city": "",
+            "country": "USA",
+            "company_id": "",
+            "vat_id": ""
+        },
+        "about": {
+            "me": "...",
+            "server": "Clould based Server, double redundency, enterprise grade hardware that is operated and maintained by technical experts.",
+            "company": "Orange and Blue - Financial focus FinTech, Operating in US and South America."
+        }
+    }
+}
