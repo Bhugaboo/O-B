@@ -4354,7 +4354,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "cardano_node_metrics_txsInMempool_int{alias=\"relay1\"}",
+          "expr": "cardano_node_metrics_txsInMempool_int{alias=\"relaynode1\"}",
           "interval": "",
           "legendFormat": "{{alias}}",
           "refId": "A"
@@ -4449,7 +4449,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "cardano_node_metrics_txsInMempool_int{alias=\"relay2\"}",
+          "expr": "cardano_node_metrics_txsInMempool_int{alias=\"relaynode2\"}",
           "interval": "",
           "legendFormat": "{{alias}}",
           "refId": "A"
@@ -4545,7 +4545,7 @@
       "targets": [
         {
           "datasource": "prometheus",
-          "expr": "rts_gc_current_bytes_used{alias=\"core\"}/(1024*1024)",
+          "expr": "rts_gc_current_bytes_used{alias=\"block-producer-node\"}/(1024*1024)",
           "interval": "",
           "legendFormat": "{{alias}}",
           "refId": "A"
@@ -4555,7 +4555,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Core Node current \"residency\" (amount of live data)",
+      "title": "block-producer-node Node current \"residency\" (amount of live data)",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -4640,7 +4640,7 @@
       "targets": [
         {
           "datasource": "prometheus",
-          "expr": "rts_gc_current_bytes_used{alias=\"relay1\"}/(1024*1024)",
+          "expr": "rts_gc_current_bytes_used{alias=\"relaynode1\"}/(1024*1024)",
           "interval": "",
           "legendFormat": "{{alias}}",
           "refId": "A"
@@ -4650,7 +4650,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Relay1 current \"residency\" (amount of live data)",
+      "title": "relaynode1 current \"residency\" (amount of live data)",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -4734,7 +4734,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "rts_gc_current_bytes_used{alias=\"relay2\"}/(1024*1024)",
+          "expr": "rts_gc_current_bytes_used{alias=\"relaynode2\"}/(1024*1024)",
           "interval": "",
           "legendFormat": "{{alias}}",
           "refId": "A"
@@ -4744,7 +4744,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Relay2 current \"residency\" (amount of live data)",
+      "title": "relaynode2 current \"residency\" (amount of live data)",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -4829,9 +4829,9 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "sum(rate(node_network_receive_bytes_total{alias=\"core\"}[1h])) * 3600",
+          "expr": "sum(rate(node_network_receive_bytes_total{alias=\"block-producer-node\"}[1h])) * 3600",
           "interval": "",
-          "legendFormat": "Core",
+          "legendFormat": "block-producer-node",
           "refId": "A"
         }
       ],
@@ -4839,7 +4839,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Core Node Aggregate Data Transfer",
+      "title": "block-producer-node Node Aggregate Data Transfer",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -4926,9 +4926,9 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "sum(rate(node_network_receive_bytes_total{alias=\"relay1\"}[1h])) * 3600",
+          "expr": "sum(rate(node_network_receive_bytes_total{alias=\"relaynode1\"}[1h])) * 3600",
           "interval": "",
-          "legendFormat": "relay1",
+          "legendFormat": "relaynode1",
           "refId": "A"
         }
       ],
@@ -4936,7 +4936,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Relay1 Aggregate Data Transfer",
+      "title": "relaynode1 Aggregate Data Transfer",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -5023,9 +5023,9 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "sum(rate(node_network_receive_bytes_total{alias=\"relay2\"}[1h])) * 3600",
+          "expr": "sum(rate(node_network_receive_bytes_total{alias=\"relaynode2\"}[1h])) * 3600",
           "interval": "",
-          "legendFormat": "relay2",
+          "legendFormat": "relaynode2",
           "refId": "A"
         }
       ],
@@ -5033,7 +5033,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Relay2 Aggregate Data Transfer",
+      "title": "relaynode2 Aggregate Data Transfer",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -5120,7 +5120,7 @@
       "targets": [
         {
           "datasource": "prometheus",
-          "expr": "rts_gc_max_bytes_used{alias=\"core\"} /(1024*1024)",
+          "expr": "rts_gc_max_bytes_used{alias=\"block-producer-node\"} /(1024*1024)",
           "interval": "",
           "legendFormat": "{{alias}}",
           "refId": "A"
@@ -5130,7 +5130,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Core Node max \"residency\"",
+      "title": "block-producer-node Node max \"residency\"",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -5215,7 +5215,7 @@
       "targets": [
         {
           "datasource": "prometheus",
-          "expr": "rts_gc_max_bytes_used{alias=\"relay1\"} /(1024*1024)",
+          "expr": "rts_gc_max_bytes_used{alias=\"relaynode1\"} /(1024*1024)",
           "interval": "",
           "legendFormat": "{{alias}}",
           "refId": "A"
@@ -5225,7 +5225,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Relay1 max \"residency\"",
+      "title": "relaynode1 max \"residency\"",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -5309,7 +5309,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "rts_gc_max_bytes_used{alias=\"relay2\"} /(1024*1024)",
+          "expr": "rts_gc_max_bytes_used{alias=\"relaynode2\"} /(1024*1024)",
           "interval": "",
           "legendFormat": "{{alias}}",
           "refId": "A"
@@ -5319,7 +5319,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Relay2 max \"residency\"",
+      "title": "relaynode2 max \"residency\"",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -5405,7 +5405,7 @@
       "targets": [
         {
           "datasource": "prometheus",
-          "expr": "node_filefd_allocated{alias=\"core\"}",
+          "expr": "node_filefd_allocated{alias=\"block-producer-node\"}",
           "interval": "",
           "legendFormat": "{{alias}}",
           "refId": "A"
@@ -5415,7 +5415,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Core Node File Descriptors",
+      "title": "block-producer-node Node File Descriptors",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -5501,7 +5501,7 @@
       "targets": [
         {
           "datasource": "prometheus",
-          "expr": "node_filefd_allocated{alias=\"relay1\"}",
+          "expr": "node_filefd_allocated{alias=\"relaynode1\"}",
           "interval": "",
           "legendFormat": "{{alias}}",
           "refId": "A"
@@ -5511,7 +5511,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Relay1 File Descriptors",
+      "title": "relaynode1 File Descriptors",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -5597,7 +5597,7 @@
       "targets": [
         {
           "datasource": "prometheus",
-          "expr": "node_filefd_allocated{alias=\"relay2\"}",
+          "expr": "node_filefd_allocated{alias=\"relaynode2\"}",
           "interval": "",
           "legendFormat": "{{alias}}",
           "refId": "A"
@@ -5607,7 +5607,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Relay2 File Descriptors",
+      "title": "relaynode2 File Descriptors",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -5693,7 +5693,7 @@
       "targets": [
         {
           "datasource": "prometheus",
-          "expr": "(cardano_node_metrics_Stat_rss_int{alias=\"core\"}*4096)/(1024*1024)",
+          "expr": "(cardano_node_metrics_Stat_rss_int{alias=\"block-producer-node\"}*4096)/(1024*1024)",
           "interval": "",
           "legendFormat": "{{alias}}",
           "refId": "A"
@@ -5703,7 +5703,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Core Node RSS (allocated memory in RAM)",
+      "title": "block-producer-node Node RSS (allocated memory in RAM)",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -5790,7 +5790,7 @@
       "targets": [
         {
           "datasource": "prometheus",
-          "expr": "(cardano_node_metrics_Stat_rss_int{alias=\"relay1\"}*4096)/(1024*1024)",
+          "expr": "(cardano_node_metrics_Stat_rss_int{alias=\"relaynode1\"}*4096)/(1024*1024)",
           "interval": "",
           "legendFormat": "{{alias}}",
           "refId": "A"
@@ -5800,7 +5800,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Relay1 RSS (allocated memory in RAM)",
+      "title": "relaynode1 RSS (allocated memory in RAM)",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -5887,7 +5887,7 @@
       "targets": [
         {
           "datasource": "prometheus",
-          "expr": "(cardano_node_metrics_Stat_rss_int{alias=\"relay2\"}*4096)/(1024*1024)",
+          "expr": "(cardano_node_metrics_Stat_rss_int{alias=\"relaynode2\"}*4096)/(1024*1024)",
           "interval": "",
           "legendFormat": "{{alias}}",
           "refId": "A"
@@ -5897,7 +5897,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Relay2 RSS (allocated memory in RAM)",
+      "title": "relaynode2 RSS (allocated memory in RAM)",
       "tooltip": {
         "shared": true,
         "sort": 0,
