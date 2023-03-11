@@ -1,0 +1,26 @@
+SHELL=/bin/bash
+# disable MTA use
+MAILTO=""
+# linux path, needed because cron doesn't know where to find cardano-cli
+PATH=/home/cardano/.cabal/bin:/home/cardano/.ghcup/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+# folder with cardano-node files
+NODE_HOME=/home/cardano/cardano-my-node
+# testnet or mainnet
+NODE_CONFIG= mainnet
+# path to the socket of cardano node, should be under db/ folder under NODE_HOME
+CARDANO_NODE_SOCKET_PATH=/home/cardano/cardano-my-node/db/
+
+# Update cardano node topology
+25 * * * * /home/cardano/cardano-my-node/topologyUpdater.sh
+
+# Pull cardano node topology - need to restart Relay
+45 0 * * * /home/cardano/cardano-my-node/relay-topology_pull.sh
+
+# get BTC and ADA prices from Kraken
+15 */1 * * * /bin/sh /home/cardano/cardano-my-node/poolStat/prices.sh > /dev/null 2>&1
+
+# get adapool/cexplorer.io data
+10 */1 * * * /bin/sh /home/cardano/cardano-my-node/poolStat/getstats.sh
+
+# check if we can run the leader stake pool check for next epoch
+30 16 * * * /home/cardano/cardano-my-node/leaderScheduleCheck.sh > /home/cardano/cardano-my-node/logs/leaderSchedule_logs.txt 2>&1
