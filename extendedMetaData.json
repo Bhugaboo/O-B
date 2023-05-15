@@ -1,0 +1,29 @@
+{
+"info": {
+        "url_png_icon_64x64": "https://github.com/Bhugaboo/O-B/raw/main/64x64.png",
+        "url_png_logo": "https://github.com/Bhugaboo/O-B/raw/main/Match.png",
+        "location": "US",
+        "social": {
+            "twitter_handle": "",
+            "telegram_handle": "",
+            "facebook_handle": "",
+            "youtube_handle": "",
+            "twitch_handle": "",
+            "discord_handle": "",
+            "github_handle": ""
+        },
+        "company": {
+            "name": "Orange and Blue",
+            "addr": "",
+            "city": "",
+            "country": "USA",
+            "company_id": "",
+            "vat_id": ""
+        },
+        "about": {
+            "me": "...",
+            "server": "Bare-metal based Servers, highly performant and resilient stake pool, enterprise grade hardware that is operated and maintained by IT professionals.",
+            "company": "Orange and Blue - Financial focus FinTech, Operating in US and South America."
+        }
+    }
+}
